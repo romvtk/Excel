@@ -6,9 +6,11 @@
         "node" : true
     },
     "rules" : {
-"semi": "off",
-"arrow-parens": "off",
-"comma-dangle":"off"
+        "semi": "off",
+        "arrow-parens": "off",
+        "comma-dangle":"off",
+        "linebreak-style": "off",
+        "operator-linebreak": "off"
     },
     "extends": ["eslint:recommended", "google"],
 }
