@@ -28,16 +28,17 @@ export class Formula extends ExcelComponent {
     this.$on('table:input', ($cell) => {
       this.$formula.text($cell.text());
     });
+    // this.$subscribe((state) => console.log(state));
   }
   onInput(event) {
-    this.$dispatch('formula:input', $(event.target).text());
+    this.$emit('formula:input', $(event.target).text());
   }
 
   onKeydown(event) {
     const keys = ['Enter', 'Tab'];
     if (keys.includes(event.key)) {
       event.preventDefault();
-      this.$dispatch('formula:done');
+      this.$emit('formula:done');
     }
   }
 }

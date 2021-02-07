@@ -3,7 +3,7 @@ export class Emitter {
     this.listeners = {};
   }
 
-  dispatch(event, ...args) {
+  emit(event, ...args) {
     if (!Array.isArray(this.listeners[event])) {
       return false;
     }
